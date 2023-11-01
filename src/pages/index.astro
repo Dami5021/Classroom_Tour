@@ -10,14 +10,13 @@ import Card from '../components/Card.astro';
 
 		<body> 
 			<ul role="list" class="image-grid">
-	
+	            <div class = 'text'>
 					<img src= "yr0201.png"/>
 					<p>This is a beautiful picture.</p>
+				</div>
 				<div class = "row">
 					<div class = "column">
-
 					  <img src= "yr0201-2.png" style="width:200px;height:200px;"/>
-
 					</div>
 					<div class = "column">
 						<img src= "IWC.png" style="width:200px;height:200px;"/>
@@ -25,7 +24,7 @@ import Card from '../components/Card.astro';
 					<div class = "column">
 						<img src="IW.png" style="width:200px;height:200px;"/>
 					</div>
-			</div>
+				</div>
 			</ul>
 		</body>
 
@@ -103,7 +102,12 @@ import Card from '../components/Card.astro';
 	.row {
      display: flex;
 
-     }
+    }
+
+	.text{
+		display: flex;
+		justify-content: center;
+	}
 
 	p{
      font-size: 20px;
