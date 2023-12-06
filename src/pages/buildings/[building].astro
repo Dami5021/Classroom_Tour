@@ -12,12 +12,13 @@ export async function getStaticPaths() {
             params: { building: b.BUILDING_CODE },
             props: { b },
         };
+    
     });
 }
 
-const image = supabase.storage.from("buildings").getPublicUrl("YR/main.jpg");
-
 const { b } = Astro.props;
+const image = supabase.storage.from("buildings").getPublicUrl(`${b.BUILDING_CODE}/main.jpg`);
+
 ---
 
 <Layout title={b.BUILDING_NAME}>
